@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Junaid Printing – Murree Road, Rawalpindi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f2;--card:#fff;--ink:#1b1a2e;--mute:#666a7a;--pri:#0f766e;--acc:#d4a017;--line:#e8e2d4;--hero1:#0b3b3a;--hero2:#14213d;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131c;--card:#181c29;--ink:#f2efe6;--mute:#a4a9ba;--line:#2a3042;--pri:#2dd4bf;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10131c;--card:#181c29;--ink:#f2efe6;--mute:#a4a9ba;--line:#2a3042;--pri:#2dd4bf;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:var(--pri)}
+.logo span{color:var(--acc)}
+nav a{color:var(--ink);text-decoration:none;font-size:.88rem;font-weight:500;margin-left:16px}
+.links{display:flex;align-items:center;overflow-x:auto}
+button{font-family:inherit;cursor:pointer}
+.theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:4px 10px;margin-left:14px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;padding:64px 0 74px;text-align:center}
+.hero .ur{font-family:'Noto Nastaliq Urdu',serif;font-size:1.5rem;color:var(--acc);line-height:2.2}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,7vw,4rem);margin:6px 0 10px}
+.hero p{max-width:620px;margin:0 auto 24px;opacity:.9}
+.btn{display:inline-block;padding:12px 24px;border-radius:30px;font-weight:600;text-decoration:none;border:0;font-size:.95rem}
+.b1{background:var(--acc);color:#1b1a2e}.b2{background:#25d366;color:#fff;margin-left:8px}
+.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px;font-size:.82rem}
+.badges span{border:1px solid #ffffff44;border-radius:20px;padding:4px 14px}
+section{padding:54px 0}
+h2{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:var(--pri)}
+.card .ic{font-size:2rem}.card h3{margin:8px 0 4px;font-size:1.05rem}.card p{margin:0;color:var(--mute);font-size:.88rem}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.calc{grid-template-columns:1fr}.b2{margin:10px 0 0}}
+label{display:block;font-size:.82rem;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:inherit;font-size:.95rem}
+.total{font-size:2.2rem;font-weight:800;color:var(--pri)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--card);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;text-align:center}
+.stats b{display:block;font-size:2rem;color:var(--acc);font-family:'Playfair Display',serif}
+.map{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+@media(max-width:760px){.map{grid-template-columns:1fr}}
+.mapbox{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px}
+footer{background:var(--hero2);color:#cfd3e6;text-align:center;padding:30px 18px 40px;font-size:.85rem}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;text-decoration:none;box-shadow:0 6px 18px #0004;z-index:30}
+.note{font-size:.78rem;color:var(--mute)}
+
+.ann{background:var(--acc);color:#1b1a2e;text-align:center;font-size:.85rem;font-weight:600;padding:6px 10px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}.tabs button,.sm{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:6px 14px;font-size:.82rem}.tabs button.on{background:var(--pri);color:#fff}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:10px}
+.g{height:130px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#fff}
+.rev{font-size:.9rem}.rev b{color:var(--acc)}
+.pa{display:none}@media print{body.printing>*:not(.pa){display:none!important}body.printing .pa{display:block}.pa img{width:100%}}
+canvas{max-width:100%;border:1px solid var(--line);background:#fff;border-radius:8px}
+#adm{display:none}.tag{font-size:.72rem;padding:2px 8px;border-radius:12px;background:var(--line)}
+.mini{font-size:.8rem}.mini td,.mini th{padding:7px 8px}
+.cw{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:min(320px,calc(100vw - 32px));background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px #0005;z-index:31;display:none;overflow:hidden}
+.cw .h{background:var(--pri);color:#fff;padding:10px 14px;font-weight:600;font-size:.9rem}.cw .b{padding:12px}.q{display:inline-block;margin:0 4px 6px 0;font-size:.75rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.steps b{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#1b1a2e;align-items:center;justify-content:center;margin-bottom:6px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:90px;background:#111;color:#fff;padding:10px 18px;border-radius:20px;z-index:50;font-size:.85rem}
+.lgo{display:flex;align-items:center;gap:8px}
+</style>
+</head>
+<body>
+<div class="ann" id="ann"></div>
+<nav><div class="wrap"><div class="logo lgo"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0f766e"/><rect x="11" y="8" width="18" height="9" rx="1.5" fill="#fff"/><rect x="7" y="16" width="26" height="12" rx="3" fill="#d4a017"/><rect x="11" y="23" width="18" height="10" rx="1.5" fill="#fff" stroke="#0b3b3a"/><rect x="14" y="26" width="12" height="1.6" fill="#0f766e"/><rect x="14" y="29.5" width="8" height="1.6" fill="#0f766e"/><circle cx="29" cy="20" r="1.4" fill="#0b3b3a"/></svg><span style="color:var(--pri)">Junaid <span>Printing</span></span></div>
+<div class="links"><a href="#services" data-ur="خدمات">Services</a><a href="#rates" data-ur="ریٹس">Rates</a><a href="#order" data-ur="آرڈر">Order</a><a href="#tools" data-ur="ٹولز">Tools</a><a href="#location" data-ur="پتہ">Location</a><a href="#adm" id="navadm" aria-label="Admin">🔐</a><button class="theme" id="lg">اردو</button><button class="theme" id="th" aria-label="Theme">🌓</button></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div style="display:flex;justify-content:center;margin-bottom:6px"><svg width="64" height="64" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0f766e"/><rect x="11" y="8" width="18" height="9" rx="1.5" fill="#fff"/><rect x="7" y="16" width="26" height="12" rx="3" fill="#d4a017"/><rect x="11" y="23" width="18" height="10" rx="1.5" fill="#fff" stroke="#0b3b3a"/><rect x="14" y="26" width="12" height="1.6" fill="#0f766e"/><rect x="14" y="29.5" width="8" height="1.6" fill="#0f766e"/><circle cx="29" cy="20" r="1.4" fill="#0b3b3a"/></svg></div><div class="ur">جنید پرنٹنگ</div>
+<h1>Junaid Printing</h1>
+<p>Fast, sharp and affordable printing in the heart of Murree Road, Rawalpindi. CNIC copies, passport photos, CVs, banners and much more — ready in minutes.</p>
+<a class="btn b1" href="#order">Place an Order</a><a class="btn b2" id="wa1" href="#">WhatsApp Us</a>
+<div class="badges"><span>⚡ Ready in minutes</span><span>🎨 Laser &amp; colour quality</span><span>💰 Honest rates</span><span>📍 Opposite Benazir Bhutto Hospital</span></div>
+</div></header>
+
+<section id="services"><div class="wrap">
+<h2>Our Services</h2><p class="sub">Everything you need under one roof.</p>
+<div class="grid">
+<div class="card"><div class="ic">📄</div><h3>Photocopy</h3><p>Crisp black &amp; white copies, single or double sided.</p></div>
+<div class="card"><div class="ic">🪪</div><h3>CNIC Copies</h3><p>Front and back on one A4 page, perfectly aligned.</p></div>
+<div class="card"><div class="ic">📷</div><h3>Passport Photos</h3><p>All standard sizes, sharp and print-ready.</p></div>
+<div class="card"><div class="ic">🖨️</div><h3>Laser &amp; Colour Print</h3><p>Documents, assignments, notes and thesis.</p></div>
+<div class="card"><div class="ic">📝</div><h3>CV &amp; Resume</h3><p>Professional templates for every kind of job.</p></div>
+<div class="card"><div class="ic">📚</div><h3>Binding &amp; Lamination</h3><p>Spiral, thermal and card lamination.</p></div>
+<div class="card"><div class="ic">🎴</div><h3>Cards &amp; Flyers</h3><p>Visiting cards, flyers, stickers and banners.</p></div>
+<div class="card"><div class="ic">🎓</div><h3>Student Support</h3><p>Typing, formatting and bulk printing at student rates.</p></div>
+</div></div></section>
+
+<section style="background:var(--card)"><div class="wrap"><div class="stats">
+<div><b>10k+</b>Pages printed</div><div><b>5 min</b>Typical turnaround</div><div><b>7 days</b>Open every week</div><div><b>100%</b>Clear, clean output</div>
+</div></div></section>
+
+<section id="rates"><div class="wrap">
+<h2>Price List</h2><p class="sub">Clear rates, no surprises.</p>
+<div class="card scroll"><table><thead><tr><th>Service</th><th>Unit</th><th>Rate (Rs.)</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="note">Rates are indicative and may change for bulk or special jobs.</p>
+</div></section>
+
+<section id="order" style="background:var(--card)"><div class="wrap">
+<h2 data-ur="آرڈر اور کیلکولیٹر">Order &amp; Calculator</h2><p class="sub">Choose, see the price, send to WhatsApp. Send your files (PDF, Word, JPG) in the chat afterwards.</p>
+<div class="calc"><div>
+<label>Service</label><select id="svc"></select>
+<div class="row"><div><label>Copies / qty</label><input id="qty" type="number" min="1" value="1"></div>
+<div><label>Paper size</label><select id="sz"><option value="1">A4</option><option value="1.3">Legal</option><option value="2">A3</option></select></div></div>
+<div class="row"><div><label>Colour</label><select id="cl"><option value="1">Black &amp; white</option><option value="3">Colour</option></select></div>
+<div><label>Sides</label><select id="sd"><option value="1">Single side</option><option value="0.85">Double side</option></select></div></div>
+<div class="row"><div><label>Pickup / Delivery</label><select id="dl"><option value="0">Pickup (free)</option><option value="100">Delivery (+Rs. 100)</option></select></div>
+<div><label>Payment</label><select id="pm"><option>Cash on pickup</option><option>Easypaisa</option></select></div></div>
+<label>Your name</label><input id="nm"><label>Coupon code (optional)</label><input id="cp" placeholder="e.g. JUNAID10">
+<label>Notes</label><textarea id="nt" rows="2" placeholder="Deadline, special request"></textarea>
+</div>
+<div class="card" style="text-align:center;display:flex;flex-direction:column;justify-content:center;gap:8px">
+<div class="note">Estimated total</div><div class="total" id="tot">Rs. 0</div><div class="note" id="odn"></div>
+<a class="btn b2" style="margin:0" id="send" href="#">Send Order on WhatsApp</a>
+<div class="note" id="payinfo"></div><div class="note"><b>Final rate is confirmed with you on WhatsApp chat.</b></div><div class="note">After paying on Easypaisa, send the <b>payment screenshot on WhatsApp</b>. Your order becomes final once we verify it.</div>
+<div class="note">Track your order: send your order number on WhatsApp and we will reply with the status (Received / Printing / Ready).</div>
+</div></div></div></section>
+
+<section id="tools"><div class="wrap">
+<h2 data-ur="مفت ٹولز">Free Customer Tools</h2><p class="sub">Everything runs on your own phone — your photos are never uploaded anywhere.</p>
+<div class="tabs"><button class="on" data-t="cnic">CNIC copy maker</button><button data-t="pp">Passport photo maker</button><button data-t="cv">CV templates</button></div>
+<div class="card" id="tl"></div>
+</div></section>
+
+<section><div class="wrap"><h2>How your order is confirmed</h2><p class="sub">A simple, safe process — your order is final only after we verify your payment.</p>
+<div class="steps"><div class="card"><b>1</b><h3>Place order</h3><p>Fill the form above and send it on WhatsApp with your files.</p></div><div class="card"><b>2</b><h3>Pay by Easypaisa</h3><p>Send the payment to our Easypaisa number and send the screenshot in the same chat.</p></div><div class="card"><b>3</b><h3>We verify</h3><p>We check your payment and mark your order as verified. Only then is it final.</p></div><div class="card"><b>4</b><h3>Collect or delivery</h3><p>We message you when it is ready. Cash on pickup is also available.</p></div></div></div></section>
+
+<section style="background:var(--card)"><div class="wrap">
+<h2>Our Work</h2><p class="sub">A glimpse of what we print every day.</p>
+<div class="grid" id="gal"></div>
+<h2 style="margin-top:44px">Customer Reviews</h2><div class="grid" id="rev"></div>
+<h2 style="margin-top:44px">Share this website</h2><p class="sub">Scan to open Junaid Printing on your phone.</p><div id="qr" style="background:#fff;display:inline-block;padding:10px;border-radius:12px"></div>
+</div></section>
+
+<section id="location"><div class="wrap">
+<h2>Find Us</h2><p class="sub">Easy to reach, right on Murree Road.</p>
+<div class="map">
+<div class="mapbox"><div style="font-size:2.4rem">📍</div>
+<b style="font-size:1.2rem">Junaid Printing</b>
+<span>Inside Majid General Store, next to Afzal Electronics, Murree Road, Rawalpindi — opposite Benazir Bhutto Hospital.</span>
+<a class="btn b1" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Afzal+Electronics+Murree+Road+Rawalpindi">Open in Google Maps</a></div>
+<div class="card"><h3>Opening hours</h3><p>Every day · 9:00 AM – 9:00 PM</p><br><h3>Contact</h3><p>WhatsApp: <span id="ph"></span></p><br><h3>Landmark</h3><p>Look for Majid General Store and Afzal Electronics, across the road from the hospital.</p></div>
+</div></div></section>
+
+<section id="adm"><div class="wrap">
+<h2>Admin Panel</h2><p class="sub">Private to this device. Data is saved in this browser only — use Backup regularly.</p>
+<div class="card" id="lg1" style="max-width:360px"><label>Admin password</label><input id="pw" type="password" placeholder="Password"><button class="btn b1" id="pwb" style="margin-top:10px">Login</button><div class="note" id="pwm"></div></div><div id="pnl" style="display:none"><div class="tabs" id="at"></div><div class="card scroll" id="ab"></div></div></div></section>
+<footer>© 2026 Junaid Printing · Murree Road, Rawalpindi<br>Made with care for our customers · <a href="#adm" id="admlink" style="color:#cfd3e6">Admin</a></footer>
+<div class="cw" id="cw"><div class="h">Chat with Junaid Printing</div><div class="b"><p class="note" style="margin-top:0">Hello! How can we help? Your message opens in WhatsApp.</p>
+<button class="sm q" data-m="Assalam o Alaikum, I want to know your rates.">Rates</button><button class="sm q" data-m="Assalam o Alaikum, what is the status of my order?">Order status</button><button class="sm q" data-m="Assalam o Alaikum, I want CNIC copies.">CNIC copy</button>
+<textarea id="cm" rows="2" placeholder="Type your message"></textarea><a class="btn b2" style="margin:8px 0 0;display:block;text-align:center" id="cs" href="#" target="_blank" rel="noopener">Send on WhatsApp</a></div></div>
+<a class="fab" id="wa2" href="#" aria-label="Chat">💬</a>
+
+<script type="application/json" id="cfg">{"ann":"🎉 Welcome to Junaid Printing — use coupon JUNAID10 for 10% off!","items":[{"n":"Photocopy B/W (A4)","u":"per page","p":3,"on":true},{"n":"Laser Print B/W (A4)","u":"per page","p":10,"on":true},{"n":"Colour Print (A4)","u":"per page","p":40,"on":true},{"n":"CNIC Copy (front + back)","u":"per set","p":20,"on":true},{"n":"Passport Photos (6 pcs)","u":"per set","p":150,"on":true},{"n":"CV Making","u":"per CV","p":300,"on":true},{"n":"Lamination (card)","u":"per piece","p":50,"on":true},{"n":"Spiral Binding","u":"per book","p":150,"on":true},{"n":"Banner / Flex","u":"per sq ft","p":35,"on":true},{"n":"Visiting Cards (100 pcs)","u":"per pack","p":800,"on":true}]}</script><script type="text/plain" id="tpl"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Junaid Printing – Murree Road, Rawalpindi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f2;--card:#fff;--ink:#1b1a2e;--mute:#666a7a;--pri:#0f766e;--acc:#d4a017;--line:#e8e2d4;--hero1:#0b3b3a;--hero2:#14213d;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131c;--card:#181c29;--ink:#f2efe6;--mute:#a4a9ba;--line:#2a3042;--pri:#2dd4bf;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10131c;--card:#181c29;--ink:#f2efe6;--mute:#a4a9ba;--line:#2a3042;--pri:#2dd4bf;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;color:var(--pri)}
+.logo span{color:var(--acc)}
+nav a{color:var(--ink);text-decoration:none;font-size:.88rem;font-weight:500;margin-left:16px}
+.links{display:flex;align-items:center;overflow-x:auto}
+button{font-family:inherit;cursor:pointer}
+.theme{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:4px 10px;margin-left:14px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;padding:64px 0 74px;text-align:center}
+.hero .ur{font-family:'Noto Nastaliq Urdu',serif;font-size:1.5rem;color:var(--acc);line-height:2.2}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,7vw,4rem);margin:6px 0 10px}
+.hero p{max-width:620px;margin:0 auto 24px;opacity:.9}
+.btn{display:inline-block;padding:12px 24px;border-radius:30px;font-weight:600;text-decoration:none;border:0;font-size:.95rem}
+.b1{background:var(--acc);color:#1b1a2e}.b2{background:#25d366;color:#fff;margin-left:8px}
+.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px;font-size:.82rem}
+.badges span{border:1px solid #ffffff44;border-radius:20px;padding:4px 14px}
+section{padding:54px 0}
+h2{font-family:'Playfair Display',serif;font-size:2rem;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:var(--pri)}
+.card .ic{font-size:2rem}.card h3{margin:8px 0 4px;font-size:1.05rem}.card p{margin:0;color:var(--mute);font-size:.88rem}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.calc{grid-template-columns:1fr}.b2{margin:10px 0 0}}
+label{display:block;font-size:.82rem;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-family:inherit;font-size:.95rem}
+.total{font-size:2.2rem;font-weight:800;color:var(--pri)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--card);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;text-align:center}
+.stats b{display:block;font-size:2rem;color:var(--acc);font-family:'Playfair Display',serif}
+.map{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+@media(max-width:760px){.map{grid-template-columns:1fr}}
+.mapbox{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;border-radius:16px;padding:30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:12px}
+footer{background:var(--hero2);color:#cfd3e6;text-align:center;padding:30px 18px 40px;font-size:.85rem}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;text-decoration:none;box-shadow:0 6px 18px #0004;z-index:30}
+.note{font-size:.78rem;color:var(--mute)}
+
+.ann{background:var(--acc);color:#1b1a2e;text-align:center;font-size:.85rem;font-weight:600;padding:6px 10px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}.tabs button,.sm{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:6px 14px;font-size:.82rem}.tabs button.on{background:var(--pri);color:#fff}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:10px}
+.g{height:130px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#fff}
+.rev{font-size:.9rem}.rev b{color:var(--acc)}
+.pa{display:none}@media print{body.printing>*:not(.pa){display:none!important}body.printing .pa{display:block}.pa img{width:100%}}
+canvas{max-width:100%;border:1px solid var(--line);background:#fff;border-radius:8px}
+#adm{display:none}.tag{font-size:.72rem;padding:2px 8px;border-radius:12px;background:var(--line)}
+.mini{font-size:.8rem}.mini td,.mini th{padding:7px 8px}
+.cw{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:min(320px,calc(100vw - 32px));background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px #0005;z-index:31;display:none;overflow:hidden}
+.cw .h{background:var(--pri);color:#fff;padding:10px 14px;font-weight:600;font-size:.9rem}.cw .b{padding:12px}.q{display:inline-block;margin:0 4px 6px 0;font-size:.75rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.steps b{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#1b1a2e;align-items:center;justify-content:center;margin-bottom:6px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:90px;background:#111;color:#fff;padding:10px 18px;border-radius:20px;z-index:50;font-size:.85rem}
+.lgo{display:flex;align-items:center;gap:8px}
+</style>
+</head>
+<body>
+<div class="ann" id="ann"></div>
+<nav><div class="wrap"><div class="logo lgo"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0f766e"/><rect x="11" y="8" width="18" height="9" rx="1.5" fill="#fff"/><rect x="7" y="16" width="26" height="12" rx="3" fill="#d4a017"/><rect x="11" y="23" width="18" height="10" rx="1.5" fill="#fff" stroke="#0b3b3a"/><rect x="14" y="26" width="12" height="1.6" fill="#0f766e"/><rect x="14" y="29.5" width="8" height="1.6" fill="#0f766e"/><circle cx="29" cy="20" r="1.4" fill="#0b3b3a"/></svg><span style="color:var(--pri)">Junaid <span>Printing</span></span></div>
+<div class="links"><a href="#services" data-ur="خدمات">Services</a><a href="#rates" data-ur="ریٹس">Rates</a><a href="#order" data-ur="آرڈر">Order</a><a href="#tools" data-ur="ٹولز">Tools</a><a href="#location" data-ur="پتہ">Location</a><a href="#adm" id="navadm" aria-label="Admin">🔐</a><button class="theme" id="lg">اردو</button><button class="theme" id="th" aria-label="Theme">🌓</button></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div style="display:flex;justify-content:center;margin-bottom:6px"><svg width="64" height="64" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0f766e"/><rect x="11" y="8" width="18" height="9" rx="1.5" fill="#fff"/><rect x="7" y="16" width="26" height="12" rx="3" fill="#d4a017"/><rect x="11" y="23" width="18" height="10" rx="1.5" fill="#fff" stroke="#0b3b3a"/><rect x="14" y="26" width="12" height="1.6" fill="#0f766e"/><rect x="14" y="29.5" width="8" height="1.6" fill="#0f766e"/><circle cx="29" cy="20" r="1.4" fill="#0b3b3a"/></svg></div><div class="ur">جنید پرنٹنگ</div>
+<h1>Junaid Printing</h1>
+<p>Fast, sharp and affordable printing in the heart of Murree Road, Rawalpindi. CNIC copies, passport photos, CVs, banners and much more — ready in minutes.</p>
+<a class="btn b1" href="#order">Place an Order</a><a class="btn b2" id="wa1" href="#">WhatsApp Us</a>
+<div class="badges"><span>⚡ Ready in minutes</span><span>🎨 Laser &amp; colour quality</span><span>💰 Honest rates</span><span>📍 Opposite Benazir Bhutto Hospital</span></div>
+</div></header>
+
+<section id="services"><div class="wrap">
+<h2>Our Services</h2><p class="sub">Everything you need under one roof.</p>
+<div class="grid">
+<div class="card"><div class="ic">📄</div><h3>Photocopy</h3><p>Crisp black &amp; white copies, single or double sided.</p></div>
+<div class="card"><div class="ic">🪪</div><h3>CNIC Copies</h3><p>Front and back on one A4 page, perfectly aligned.</p></div>
+<div class="card"><div class="ic">📷</div><h3>Passport Photos</h3><p>All standard sizes, sharp and print-ready.</p></div>
+<div class="card"><div class="ic">🖨️</div><h3>Laser &amp; Colour Print</h3><p>Documents, assignments, notes and thesis.</p></div>
+<div class="card"><div class="ic">📝</div><h3>CV &amp; Resume</h3><p>Professional templates for every kind of job.</p></div>
+<div class="card"><div class="ic">📚</div><h3>Binding &amp; Lamination</h3><p>Spiral, thermal and card lamination.</p></div>
+<div class="card"><div class="ic">🎴</div><h3>Cards &amp; Flyers</h3><p>Visiting cards, flyers, stickers and banners.</p></div>
+<div class="card"><div class="ic">🎓</div><h3>Student Support</h3><p>Typing, formatting and bulk printing at student rates.</p></div>
+</div></div></section>
+
+<section style="background:var(--card)"><div class="wrap"><div class="stats">
+<div><b>10k+</b>Pages printed</div><div><b>5 min</b>Typical turnaround</div><div><b>7 days</b>Open every week</div><div><b>100%</b>Clear, clean output</div>
+</div></div></section>
+
+<section id="rates"><div class="wrap">
+<h2>Price List</h2><p class="sub">Clear rates, no surprises.</p>
+<div class="card scroll"><table><thead><tr><th>Service</th><th>Unit</th><th>Rate (Rs.)</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="note">Rates are indicative and may change for bulk or special jobs.</p>
+</div></section>
+
+<section id="order" style="background:var(--card)"><div class="wrap">
+<h2 data-ur="آرڈر اور کیلکولیٹر">Order &amp; Calculator</h2><p class="sub">Choose, see the price, send to WhatsApp. Send your files (PDF, Word, JPG) in the chat afterwards.</p>
+<div class="calc"><div>
+<label>Service</label><select id="svc"></select>
+<div class="row"><div><label>Copies / qty</label><input id="qty" type="number" min="1" value="1"></div>
+<div><label>Paper size</label><select id="sz"><option value="1">A4</option><option value="1.3">Legal</option><option value="2">A3</option></select></div></div>
+<div class="row"><div><label>Colour</label><select id="cl"><option value="1">Black &amp; white</option><option value="3">Colour</option></select></div>
+<div><label>Sides</label><select id="sd"><option value="1">Single side</option><option value="0.85">Double side</option></select></div></div>
+<div class="row"><div><label>Pickup / Delivery</label><select id="dl"><option value="0">Pickup (free)</option><option value="100">Delivery (+Rs. 100)</option></select></div>
+<div><label>Payment</label><select id="pm"><option>Cash on pickup</option><option>Easypaisa</option></select></div></div>
+<label>Your name</label><input id="nm"><label>Coupon code (optional)</label><input id="cp" placeholder="e.g. JUNAID10">
+<label>Notes</label><textarea id="nt" rows="2" placeholder="Deadline, special request"></textarea>
+</div>
+<div class="card" style="text-align:center;display:flex;flex-direction:column;justify-content:center;gap:8px">
+<div class="note">Estimated total</div><div class="total" id="tot">Rs. 0</div><div class="note" id="odn"></div>
+<a class="btn b2" style="margin:0" id="send" href="#">Send Order on WhatsApp</a>
+<div class="note" id="payinfo"></div><div class="note"><b>Final rate is confirmed with you on WhatsApp chat.</b></div><div class="note">After paying on Easypaisa, send the <b>payment screenshot on WhatsApp</b>. Your order becomes final once we verify it.</div>
+<div class="note">Track your order: send your order number on WhatsApp and we will reply with the status (Received / Printing / Ready).</div>
+</div></div></div></section>
+
+<section id="tools"><div class="wrap">
+<h2 data-ur="مفت ٹولز">Free Customer Tools</h2><p class="sub">Everything runs on your own phone — your photos are never uploaded anywhere.</p>
+<div class="tabs"><button class="on" data-t="cnic">CNIC copy maker</button><button data-t="pp">Passport photo maker</button><button data-t="cv">CV templates</button></div>
+<div class="card" id="tl"></div>
+</div></section>
+
+<section><div class="wrap"><h2>How your order is confirmed</h2><p class="sub">A simple, safe process — your order is final only after we verify your payment.</p>
+<div class="steps"><div class="card"><b>1</b><h3>Place order</h3><p>Fill the form above and send it on WhatsApp with your files.</p></div><div class="card"><b>2</b><h3>Pay by Easypaisa</h3><p>Send the payment to our Easypaisa number and send the screenshot in the same chat.</p></div><div class="card"><b>3</b><h3>We verify</h3><p>We check your payment and mark your order as verified. Only then is it final.</p></div><div class="card"><b>4</b><h3>Collect or delivery</h3><p>We message you when it is ready. Cash on pickup is also available.</p></div></div></div></section>
+
+<section style="background:var(--card)"><div class="wrap">
+<h2>Our Work</h2><p class="sub">A glimpse of what we print every day.</p>
+<div class="grid" id="gal"></div>
+<h2 style="margin-top:44px">Customer Reviews</h2><div class="grid" id="rev"></div>
+<h2 style="margin-top:44px">Share this website</h2><p class="sub">Scan to open Junaid Printing on your phone.</p><div id="qr" style="background:#fff;display:inline-block;padding:10px;border-radius:12px"></div>
+</div></section>
+
+<section id="location"><div class="wrap">
+<h2>Find Us</h2><p class="sub">Easy to reach, right on Murree Road.</p>
+<div class="map">
+<div class="mapbox"><div style="font-size:2.4rem">📍</div>
+<b style="font-size:1.2rem">Junaid Printing</b>
+<span>Inside Majid General Store, next to Afzal Electronics, Murree Road, Rawalpindi — opposite Benazir Bhutto Hospital.</span>
+<a class="btn b1" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Afzal+Electronics+Murree+Road+Rawalpindi">Open in Google Maps</a></div>
+<div class="card"><h3>Opening hours</h3><p>Every day · 9:00 AM – 9:00 PM</p><br><h3>Contact</h3><p>WhatsApp: <span id="ph"></span></p><br><h3>Landmark</h3><p>Look for Majid General Store and Afzal Electronics, across the road from the hospital.</p></div>
+</div></div></section>
+
+<section id="adm"><div class="wrap">
+<h2>Admin Panel</h2><p class="sub">Private to this device. Data is saved in this browser only — use Backup regularly.</p>
+<div class="card" id="lg1" style="max-width:360px"><label>Admin password</label><input id="pw" type="password" placeholder="Password"><button class="btn b1" id="pwb" style="margin-top:10px">Login</button><div class="note" id="pwm"></div></div><div id="pnl" style="display:none"><div class="tabs" id="at"></div><div class="card scroll" id="ab"></div></div></div></section>
+<footer>© 2026 Junaid Printing · Murree Road, Rawalpindi<br>Made with care for our customers · <a href="#adm" id="admlink" style="color:#cfd3e6">Admin</a></footer>
+<div class="cw" id="cw"><div class="h">Chat with Junaid Printing</div><div class="b"><p class="note" style="margin-top:0">Hello! How can we help? Your message opens in WhatsApp.</p>
+<button class="sm q" data-m="Assalam o Alaikum, I want to know your rates.">Rates</button><button class="sm q" data-m="Assalam o Alaikum, what is the status of my order?">Order status</button><button class="sm q" data-m="Assalam o Alaikum, I want CNIC copies.">CNIC copy</button>
+<textarea id="cm" rows="2" placeholder="Type your message"></textarea><a class="btn b2" style="margin:8px 0 0;display:block;text-align:center" id="cs" href="#" target="_blank" rel="noopener">Send on WhatsApp</a></div></div>
+<a class="fab" id="wa2" href="#" aria-label="Chat">💬</a>
+
+<script type="application/json" id="cfg">@@CFG@@<\/script><script type="text/plain" id="tpl"><\/script>
+<script>
+// ===== Edit these =====
+var CFG=JSON.parse(document.getElementById("cfg").textContent),ITEMS=CFG.items,ANNOUNCE=CFG.ann,PHONE="923199986253";
+var COUPONS={JUNAID10:10};
+var PAY={Easypaisa:"Easypaisa: 0319-9986253 — send the payment and share the screenshot on WhatsApp.","Cash on pickup":"Pay cash when you collect your order."};
+var REVIEWS=[["Ahmed R.","Very fast CNIC copies, clean and neat!"],["Sana K.","My CV came out professional. Highly recommend."],["Hamza","Fair rates and quick service near the hospital."]]; // replace with real reviews
+// ======================
+var $=function(i){return document.getElementById(i)},E=function(t,h,c){var e=document.createElement(t);if(h!=null)e.innerHTML=h;if(c)e.className=c;return e};
+var KEY="jp_admin_v1",D={orders:[],tx:[],stock:[{n:"A4 paper (sheets)",q:500},{n:"Toner (cartridge)",q:1}],udh:[],pw:"1234",seq:0};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||"null");if(sv)D=Object.assign(D,sv)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){}}
+function wa(p,m){return "https://wa.me/"+p+"?text="+encodeURIComponent(m)}
+function today(){return new Date().toISOString().slice(0,10)}
+$("ann").textContent=ANNOUNCE;if(!ANNOUNCE)$("ann").style.display="none";
+// rates + select
+var rows="",opts="";ITEMS.forEach(function(x,i){rows+="<tr"+(x.on?"":" style='opacity:.55'")+"><td>"+x.n+(x.on?"":" <span class=tag>Currently unavailable</span>")+"</td><td>"+x.u+"</td><td><b>"+x.p+"</b></td></tr>";opts+='<option value="'+i+'"'+(x.on?'':' disabled')+'>'+x.n+(x.on?" – Rs. "+x.p+" "+x.u:" (unavailable)")+"</option>"});
+$("rows").innerHTML=rows;$("svc").innerHTML=opts;var fi=ITEMS.findIndex(function(x){return x.on});if(fi>=0)$("svc").value=fi;
+// calculator
+var odn="JP-"+String(Date.now()).slice(-6);
+function calc(){var it=ITEMS[$("svc").value];if(!it||!it.on){$("tot").textContent="Unavailable";$("send").href="#";return}var q=Math.max(1,parseInt($("qty").value)||1),t=it.p*q*$("sz").value*$("cl").value*$("sd").value;
+ var c=COUPONS[($("cp").value||"").trim().toUpperCase()]||0;t=Math.round(t*(1-c/100)+ +$("dl").value);
+ $("tot").textContent="Rs. "+t.toLocaleString();$("odn").textContent="Order no: "+odn+(c?" · "+c+"% coupon applied":"");
+ $("payinfo").textContent=PAY[$("pm").value];
+ $("send").href=wa(PHONE,"Assalam o Alaikum, Junaid Printing!\nOrder no: "+odn+"\nName: "+($("nm").value||"-")+"\nService: "+it.n+"\nQty: "+q+" · "+$("sz").selectedOptions[0].text+" · "+$("cl").selectedOptions[0].text+" · "+$("sd").selectedOptions[0].text+"\n"+$("dl").selectedOptions[0].text+" · Payment: "+$("pm").value+"\nEstimated total: Rs. "+t+" (final rate to be confirmed on chat)\nNotes: "+($("nt").value||"-")+"\n(I will send my files here)")}
+["svc","qty","sz","cl","sd","dl","pm","nm","cp","nt"].forEach(function(i){$(i).addEventListener("input",calc)});calc();
+// gallery/reviews
+var G=[["🪪","#0f766e"],["📷","#7c3aed"],["📚","#b45309"],["🎴","#be123c"],["🖨️","#1d4ed8"],["📝","#047857"]];
+G.forEach(function(g){var d=E("div",g[0],"g");d.style.background=g[1];$("gal").appendChild(d)});
+REVIEWS.forEach(function(r){$("rev").appendChild(E("div","<div style='color:var(--acc)'>★★★★★</div><p class='rev'>“"+r[1]+"”</p><b>"+r[0]+"</b>","card"))});
+// QR
+var sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";sc.onload=function(){try{new QRCode($("qr"),{text:location.href,width:140,height:140})}catch(e){}};document.head.appendChild(sc);
+$("wa1").href=wa(PHONE,"Assalam o Alaikum, Junaid Printing!");
+$("wa2").onclick=function(e){e.preventDefault();var c=$("cw");c.style.display=c.style.display=="block"?"none":"block"};
+function cmsg(){$("cs").href=wa(PHONE,$("cm").value||"Assalam o Alaikum, Junaid Printing!")}$("cm").oninput=cmsg;cmsg();
+document.querySelectorAll(".q").forEach(function(b){b.onclick=function(){$("cm").value=b.dataset.m;cmsg()}});$("ph").textContent="+"+PHONE;
+// theme + language
+$("th").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")};
+var ur=false;$("lg").onclick=function(){ur=!ur;document.querySelectorAll("[data-ur]").forEach(function(e){if(!e.dataset.en)e.dataset.en=e.textContent;e.textContent=ur?e.dataset.ur:e.dataset.en});document.body.style.fontFamily=ur?"'Noto Nastaliq Urdu',Poppins,serif":"";$("lg").textContent=ur?"English":"اردو"};
+// print helper
+function pr(h){var p=document.querySelector(".pa");if(!p){p=E("div","","pa");document.body.appendChild(p)}p.innerHTML=h;document.body.classList.add("printing");setTimeout(function(){window.print();document.body.classList.remove("printing")},150)}
+// customer tools
+function load(f,cb){var i=new Image();i.onload=cb.bind(null,i);i.src=URL.createObjectURL(f)}
+function cover(x,i,dx,dy,w,h){var r=Math.max(w/i.width,h/i.height),sw=w/r,sh=h/r;x.drawImage(i,(i.width-sw)/2,(i.height-sh)/2,sw,sh,dx,dy,w,h);x.strokeStyle="#000";x.lineWidth=1.5;x.strokeRect(dx,dy,w,h)}
+function tool(t){var b=$("tl");b.innerHTML="";
+ if(t=="cv"){b.innerHTML="<p>Pick a style and we will make your CV in minutes:</p>";["Slate-green sidebar with photo","Clean one-column classic","Modern two-tone","Fresher / student CV","Teacher / office job CV","Driver / skilled worker CV"].forEach(function(n){var a=E("a",n,"sm");a.style.cssText="display:inline-block;margin:4px;text-decoration:none";a.href=wa(PHONE,"Assalam o Alaikum! I want a CV in this style: "+n);a.target="_blank";b.appendChild(a)});return}
+ var cn=t=="cnic",c=E("canvas");c.width=794;c.height=1123;var x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,794,1123);
+ var f1=E("input"),f2=E("input"),n=E("select","<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>");f1.type=f2.type="file";f1.accept=f2.accept="image/*";
+ b.appendChild(E("label",cn?"CNIC front":"Photo"));b.appendChild(f1);if(cn){b.appendChild(E("label","CNIC back"));b.appendChild(f2)}
+ b.appendChild(E("label",cn?"Sets on the page":"Photos on the page (×4)"));if(!cn)n.innerHTML="<option value=1>4</option><option value=2>8</option><option value=3>12</option>";b.appendChild(n);
+ var pb=E("button","Print","btn b1");pb.style.margin="12px 0";b.appendChild(pb);b.appendChild(E("br"));b.appendChild(c);var A,B;
+ function draw(){x.fillStyle="#fff";x.fillRect(0,0,794,1123);var k=+n.value;
+  if(cn){for(var r=0;r<k;r++){if(A)cover(x,A,60,40+r*215,323,204);if(B)cover(x,B,411,40+r*215,323,204)}}
+  else if(A){for(var r=0;r<k;r++)for(var q=0;q<4;q++)cover(x,A,40+q*180,40+r*190,132,170)}}
+ f1.onchange=function(){load(f1.files[0],function(i){A=i;draw()})};f2.onchange=function(){load(f2.files[0],function(i){B=i;draw()})};n.onchange=draw;
+ pb.onclick=function(){pr("<img src='"+c.toDataURL("image/png")+"'>")}}
+document.querySelectorAll(".tabs button[data-t]").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tabs button[data-t]").forEach(function(o){o.classList.remove("on")});b.classList.add("on");tool(b.dataset.t)}});tool("cnic");
+// ===== Admin =====
+var tab="Orders",ST=["Awaiting payment","Payment verified","Printing","Ready","Delivered"];
+function tt(m){var t=E("div",m,"toast");document.body.appendChild(t);setTimeout(function(){t.remove()},2600)}
+function tw(b,l){if(b.dataset.a)return true;b.dataset.a=1;var o=b.textContent;b.textContent="Sure?";setTimeout(function(){b.dataset.a="";b.textContent=o},3000);return false}
+function openAdm(e){if(e)e.preventDefault();$("adm").style.display="block";$("adm").scrollIntoView()}
+$("admlink").onclick=openAdm;$("navadm").onclick=openAdm;if(location.hash=="#adm")openAdm();
+function login(){if($("pw").value===D.pw){$("lg1").style.display="none";$("pnl").style.display="block";admin()}else $("pwm").textContent="Wrong password"}
+$("pwb").onclick=login;$("pw").onkeydown=function(e){if(e.key=="Enter")login()};
+function money(n){return "Rs. "+(+n||0).toLocaleString()}
+function sums(day){var s=0,e=0;D.tx.forEach(function(t){if(!day||t.d==day){if(t.k=="sale")s+=t.a;else e+=t.a}});return{s:s,e:e,p:s-e}}
+function admin(){var T=$("at");T.innerHTML="";["Orders","Accounts","Stock","Udhaar","Services","Settings"].forEach(function(n){var b=E("button",n,n==tab?"on":"");b.onclick=function(){tab=n;admin()};T.appendChild(b)});
+ var B=$("ab");B.innerHTML="";
+ if(tab=="Orders"){B.innerHTML="<div class=row><input id=on placeholder=Name><input id=op placeholder='Phone 92…'><select id=os>"+opts+"</select><input id=oq type=number value=1><input id=oa type=number placeholder=Amount><input id=od type=number placeholder='Paid now'></div><button class='btn b1' id=oadd>Add order</button><table class=mini><tr><th>No</th><th>Customer</th><th>Job</th><th>Amount</th><th>Status</th><th></th></tr>"+D.orders.slice().reverse().map(function(o,i){var ix=D.orders.length-1-i;return"<tr><td>"+o.no+"</td><td>"+o.n+"</td><td>"+o.j+"</td><td>"+money(o.a)+" <small>(paid "+money(o.pd)+")</small></td><td><button class=sm data-s="+ix+">"+o.s+"</button></td><td>"+(o.p?"<a class=sm target=_blank href='"+wa(o.p,"Assalam o Alaikum "+o.n+", your order "+o.no+" status: "+o.s+(o.s=="Payment verified"?" — your order is now final. Thank you!":"")+". Junaid Printing.")+"'>WhatsApp</a> ":"")+"<button class=sm data-i="+ix+">Invoice</button> <button class=sm data-x="+ix+">✕</button></td></tr>"}).join("")+"</table>";
+  $("oadd").onclick=function(){var q=+$("oq").value||1,a=+$("oa").value||ITEMS[$("os").value].p*q,pd=+$("od").value||0;D.seq++;D.orders.push({no:"JP-"+String(D.seq).padStart(4,"0"),n:$("on").value||"Walk-in",p:$("op").value.replace(/\D/g,""),j:ITEMS[$("os").value].n+" ×"+q,a:a,pd:pd,s:"Awaiting payment",d:today()});if(pd)D.tx.push({d:today(),k:"sale",t:"Order "+D.seq,a:pd});save();admin()};
+  B.querySelectorAll("[data-s]").forEach(function(b){b.onclick=function(){var o=D.orders[b.dataset.s];o.s=ST[(ST.indexOf(o.s)+1)%ST.length];save();admin()}});
+  B.querySelectorAll("[data-x]").forEach(function(b){b.onclick=function(){if(tw(b)){D.orders.splice(b.dataset.x,1);save();admin()}}});
+  B.querySelectorAll("[data-i]").forEach(function(b){b.onclick=function(){var o=D.orders[b.dataset.i];pr("<div style='padding:30px;font-family:sans-serif'><h1>Junaid Printing</h1><p>Murree Road, Rawalpindi (opp. Benazir Bhutto Hospital)</p><hr><h3>Invoice "+o.no+"</h3><p>Date: "+o.d+"<br>Customer: "+o.n+"<br>Job: "+o.j+"</p><h2>Total: "+money(o.a)+"</h2><p>Paid: "+money(o.pd)+" · Balance: "+money(o.a-o.pd)+"</p><p>Thank you!</p></div>")}})}
+ if(tab=="Accounts"){var t=sums(today()),all=sums();B.innerHTML="<div class=stats><div><b>"+money(t.s)+"</b>Sales today</div><div><b>"+money(t.e)+"</b>Expenses today</div><div><b>"+money(t.p)+"</b>Profit today</div><div><b>"+money(all.p)+"</b>Profit all time</div></div><div class=row style='margin-top:14px'><select id=tk><option value=sale>Sale</option><option value=exp>Expense</option></select><input id=tt placeholder=Description><input id=ta type=number placeholder=Amount></div><button class='btn b1' id=tadd>Add</button> <button class='btn b1' id=trp style='background:var(--pri);color:#fff'>Print today's report</button><table class=mini><tr><th>Date</th><th>Type</th><th>Detail</th><th>Amount</th></tr>"+D.tx.slice(-30).reverse().map(function(r){return"<tr><td>"+r.d+"</td><td>"+r.k+"</td><td>"+r.t+"</td><td>"+money(r.a)+"</td></tr>"}).join("")+"</table>";
+  $("tadd").onclick=function(){var a=+$("ta").value;if(a){D.tx.push({d:today(),k:$("tk").value,t:$("tt").value||"-",a:a});save();admin()}};
+  $("trp").onclick=function(){pr("<div style='padding:30px;font-family:sans-serif'><h1>Daily Report — "+today()+"</h1><p>Junaid Printing</p><table border=1 cellpadding=8 style='border-collapse:collapse'><tr><td>Sales</td><td>"+money(t.s)+"</td></tr><tr><td>Expenses</td><td>"+money(t.e)+"</td></tr><tr><td><b>Profit</b></td><td><b>"+money(t.p)+"</b></td></tr></table><h3>Stock</h3>"+D.stock.map(function(s){return s.n+": "+s.q}).join("<br>")+"</div>")}}
+ if(tab=="Stock"){B.innerHTML="<div class=row><input id=sn placeholder='Item (e.g. A3 paper)'><input id=sq type=number placeholder=Qty></div><button class='btn b1' id=sadd>Add item</button><table class=mini>"+D.stock.map(function(s,i){return"<tr><td>"+s.n+"</td><td"+(s.q<50?" style='color:#dc2626'":"")+"><b>"+s.q+"</b></td><td><button class=sm data-m="+i+">−10</button> <button class=sm data-p="+i+">+100</button></td></tr>"}).join("")+"</table>";
+  $("sadd").onclick=function(){if($("sn").value){D.stock.push({n:$("sn").value,q:+$("sq").value||0});save();admin()}};
+  B.querySelectorAll("[data-m]").forEach(function(b){b.onclick=function(){D.stock[b.dataset.m].q-=10;save();admin()}});B.querySelectorAll("[data-p]").forEach(function(b){b.onclick=function(){D.stock[b.dataset.p].q+=100;save();admin()}})}
+ if(tab=="Udhaar"){var tot=D.udh.reduce(function(a,u){return a+u.a},0);B.innerHTML="<div class=row><input id=un placeholder='Customer name'><input id=ua type=number placeholder=Amount></div><button class='btn b1' id=uadd>Add udhaar</button><h3>Total pending: "+money(tot)+"</h3><table class=mini>"+D.udh.map(function(u,i){return"<tr><td>"+u.n+"</td><td>"+money(u.a)+"</td><td>"+u.d+"</td><td><button class=sm data-u="+i+">Paid ✓</button></td></tr>"}).join("")+"</table>";
+  $("uadd").onclick=function(){if($("un").value&&+$("ua").value){D.udh.push({n:$("un").value,a:+$("ua").value,d:today()});save();admin()}};
+  B.querySelectorAll("[data-u]").forEach(function(b){b.onclick=function(){var u=D.udh.splice(b.dataset.u,1)[0];D.tx.push({d:today(),k:"sale",t:"Udhaar paid: "+u.n,a:u.a});save();admin()}})}
+ if(tab=="Services"){B.innerHTML="<p class=note>Change rates, mark a service unavailable, then press Publish so every customer sees it.</p><label>Announcement bar (leave empty to hide)</label><input id=an><table class=mini><tr><th>Service</th><th>Unit</th><th>Rate</th><th>Available</th><th></th></tr>"+CFG.items.map(function(x,i){return"<tr><td><input data-f=n data-k="+i+"></td><td><input data-f=u data-k="+i+"></td><td><input type=number data-f=p data-k="+i+"></td><td><input type=checkbox data-f=on data-k="+i+"></td><td><button class=sm data-d="+i+">✕</button></td></tr>"}).join("")+"</table><button class=sm id=sa>+ Add service</button> <button class='btn b1' id=sp>Publish to website</button><div class=note id=sm></div>";$("an").value=CFG.ann||"";
+  B.querySelectorAll("[data-f]").forEach(function(e){var x=CFG.items[e.dataset.k],f=e.dataset.f;if(f=="on")e.checked=x.on;else e.value=x[f];e.onchange=function(){x[f]=f=="on"?e.checked:f=="p"?+e.value||0:e.value}});
+  B.querySelectorAll("[data-d]").forEach(function(b){b.onclick=function(){if(tw(b)){CFG.items.splice(b.dataset.d,1);admin()}}});
+  $("sa").onclick=function(){CFG.items.push({n:"New service",u:"per piece",p:0,on:true});admin()};
+  $("sp").onclick=function(){CFG.ann=$("an").value;$("sm").textContent="Publishing…";(typeof claude!=="undefined"?claude.use("artifact"):Promise.resolve(null)).then(function(a){if(!a){$("sm").textContent="Publishing is only possible when you open the page from your Claude account.";return}return a.publish(pubHtml())}).catch(function(e){$("sm").textContent="Could not publish ("+(e.code||e.message)+"). "+(e.code=="not_writer"?"Open the page while logged in to your own Claude account.":"")})}}
+ if(tab=="Settings"){B.innerHTML="<label>Change password</label><input id=np placeholder='New password'><button class='btn b1' id=npb style='margin:8px 0'>Save password</button><label>Backup (copy this text and keep it safe) / Restore (paste and press Restore)</label><textarea id=bk rows=5></textarea><button class='btn b1' id=bkb>Restore</button>";$("bk").value=JSON.stringify(D);
+  $("npb").onclick=function(){if($("np").value){D.pw=$("np").value;save();tt("Password changed")}};$("bkb").onclick=function(){try{D=Object.assign(D,JSON.parse($("bk").value));save();admin();tt("Restored")}catch(e){tt("Invalid backup")}}}}
+
+function pubHtml(){var X="</"+"script",O="<scr"+"ipt type=\"text/plain\" id=\"tpl\">",A=$("tpl").textContent.split("<\\/script").join(X),M="@@"+"CFG@@";
+ var filled=O+A.split(X).join("<\\/script")+X,h=A.split(O+X).join(filled);
+ var j=JSON.stringify(CFG).split("</").join("<\\/");return h.replace(M,function(){return j})}
+<\/script>
+
+</body>
+</html>
+</script>
+<script>
+// ===== Edit these =====
+var CFG=JSON.parse(document.getElementById("cfg").textContent),ITEMS=CFG.items,ANNOUNCE=CFG.ann,PHONE="923199986253";
+var COUPONS={JUNAID10:10};
+var PAY={Easypaisa:"Easypaisa: 0319-9986253 — send the payment and share the screenshot on WhatsApp.","Cash on pickup":"Pay cash when you collect your order."};
+var REVIEWS=[["Ahmed R.","Very fast CNIC copies, clean and neat!"],["Sana K.","My CV came out professional. Highly recommend."],["Hamza","Fair rates and quick service near the hospital."]]; // replace with real reviews
+// ======================
+var $=function(i){return document.getElementById(i)},E=function(t,h,c){var e=document.createElement(t);if(h!=null)e.innerHTML=h;if(c)e.className=c;return e};
+var KEY="jp_admin_v1",D={orders:[],tx:[],stock:[{n:"A4 paper (sheets)",q:500},{n:"Toner (cartridge)",q:1}],udh:[],pw:"1234",seq:0};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||"null");if(sv)D=Object.assign(D,sv)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){}}
+function wa(p,m){return "https://wa.me/"+p+"?text="+encodeURIComponent(m)}
+function today(){return new Date().toISOString().slice(0,10)}
+$("ann").textContent=ANNOUNCE;if(!ANNOUNCE)$("ann").style.display="none";
+// rates + select
+var rows="",opts="";ITEMS.forEach(function(x,i){rows+="<tr"+(x.on?"":" style='opacity:.55'")+"><td>"+x.n+(x.on?"":" <span class=tag>Currently unavailable</span>")+"</td><td>"+x.u+"</td><td><b>"+x.p+"</b></td></tr>";opts+='<option value="'+i+'"'+(x.on?'':' disabled')+'>'+x.n+(x.on?" – Rs. "+x.p+" "+x.u:" (unavailable)")+"</option>"});
+$("rows").innerHTML=rows;$("svc").innerHTML=opts;var fi=ITEMS.findIndex(function(x){return x.on});if(fi>=0)$("svc").value=fi;
+// calculator
+var odn="JP-"+String(Date.now()).slice(-6);
+function calc(){var it=ITEMS[$("svc").value];if(!it||!it.on){$("tot").textContent="Unavailable";$("send").href="#";return}var q=Math.max(1,parseInt($("qty").value)||1),t=it.p*q*$("sz").value*$("cl").value*$("sd").value;
+ var c=COUPONS[($("cp").value||"").trim().toUpperCase()]||0;t=Math.round(t*(1-c/100)+ +$("dl").value);
+ $("tot").textContent="Rs. "+t.toLocaleString();$("odn").textContent="Order no: "+odn+(c?" · "+c+"% coupon applied":"");
+ $("payinfo").textContent=PAY[$("pm").value];
+ $("send").href=wa(PHONE,"Assalam o Alaikum, Junaid Printing!\nOrder no: "+odn+"\nName: "+($("nm").value||"-")+"\nService: "+it.n+"\nQty: "+q+" · "+$("sz").selectedOptions[0].text+" · "+$("cl").selectedOptions[0].text+" · "+$("sd").selectedOptions[0].text+"\n"+$("dl").selectedOptions[0].text+" · Payment: "+$("pm").value+"\nEstimated total: Rs. "+t+" (final rate to be confirmed on chat)\nNotes: "+($("nt").value||"-")+"\n(I will send my files here)")}
+["svc","qty","sz","cl","sd","dl","pm","nm","cp","nt"].forEach(function(i){$(i).addEventListener("input",calc)});calc();
+// gallery/reviews
+var G=[["🪪","#0f766e"],["📷","#7c3aed"],["📚","#b45309"],["🎴","#be123c"],["🖨️","#1d4ed8"],["📝","#047857"]];
+G.forEach(function(g){var d=E("div",g[0],"g");d.style.background=g[1];$("gal").appendChild(d)});
+REVIEWS.forEach(function(r){$("rev").appendChild(E("div","<div style='color:var(--acc)'>★★★★★</div><p class='rev'>“"+r[1]+"”</p><b>"+r[0]+"</b>","card"))});
+// QR
+var sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";sc.onload=function(){try{new QRCode($("qr"),{text:location.href,width:140,height:140})}catch(e){}};document.head.appendChild(sc);
+$("wa1").href=wa(PHONE,"Assalam o Alaikum, Junaid Printing!");
+$("wa2").onclick=function(e){e.preventDefault();var c=$("cw");c.style.display=c.style.display=="block"?"none":"block"};
+function cmsg(){$("cs").href=wa(PHONE,$("cm").value||"Assalam o Alaikum, Junaid Printing!")}$("cm").oninput=cmsg;cmsg();
+document.querySelectorAll(".q").forEach(function(b){b.onclick=function(){$("cm").value=b.dataset.m;cmsg()}});$("ph").textContent="+"+PHONE;
+// theme + language
+$("th").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme:dark)").matches);r.setAttribute("data-theme",d?"light":"dark")};
+var ur=false;$("lg").onclick=function(){ur=!ur;document.querySelectorAll("[data-ur]").forEach(function(e){if(!e.dataset.en)e.dataset.en=e.textContent;e.textContent=ur?e.dataset.ur:e.dataset.en});document.body.style.fontFamily=ur?"'Noto Nastaliq Urdu',Poppins,serif":"";$("lg").textContent=ur?"English":"اردو"};
+// print helper
+function pr(h){var p=document.querySelector(".pa");if(!p){p=E("div","","pa");document.body.appendChild(p)}p.innerHTML=h;document.body.classList.add("printing");setTimeout(function(){window.print();document.body.classList.remove("printing")},150)}
+// customer tools
+function load(f,cb){var i=new Image();i.onload=cb.bind(null,i);i.src=URL.createObjectURL(f)}
+function cover(x,i,dx,dy,w,h){var r=Math.max(w/i.width,h/i.height),sw=w/r,sh=h/r;x.drawImage(i,(i.width-sw)/2,(i.height-sh)/2,sw,sh,dx,dy,w,h);x.strokeStyle="#000";x.lineWidth=1.5;x.strokeRect(dx,dy,w,h)}
+function tool(t){var b=$("tl");b.innerHTML="";
+ if(t=="cv"){b.innerHTML="<p>Pick a style and we will make your CV in minutes:</p>";["Slate-green sidebar with photo","Clean one-column classic","Modern two-tone","Fresher / student CV","Teacher / office job CV","Driver / skilled worker CV"].forEach(function(n){var a=E("a",n,"sm");a.style.cssText="display:inline-block;margin:4px;text-decoration:none";a.href=wa(PHONE,"Assalam o Alaikum! I want a CV in this style: "+n);a.target="_blank";b.appendChild(a)});return}
+ var cn=t=="cnic",c=E("canvas");c.width=794;c.height=1123;var x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,794,1123);
+ var f1=E("input"),f2=E("input"),n=E("select","<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>");f1.type=f2.type="file";f1.accept=f2.accept="image/*";
+ b.appendChild(E("label",cn?"CNIC front":"Photo"));b.appendChild(f1);if(cn){b.appendChild(E("label","CNIC back"));b.appendChild(f2)}
+ b.appendChild(E("label",cn?"Sets on the page":"Photos on the page (×4)"));if(!cn)n.innerHTML="<option value=1>4</option><option value=2>8</option><option value=3>12</option>";b.appendChild(n);
+ var pb=E("button","Print","btn b1");pb.style.margin="12px 0";b.appendChild(pb);b.appendChild(E("br"));b.appendChild(c);var A,B;
+ function draw(){x.fillStyle="#fff";x.fillRect(0,0,794,1123);var k=+n.value;
+  if(cn){for(var r=0;r<k;r++){if(A)cover(x,A,60,40+r*215,323,204);if(B)cover(x,B,411,40+r*215,323,204)}}
+  else if(A){for(var r=0;r<k;r++)for(var q=0;q<4;q++)cover(x,A,40+q*180,40+r*190,132,170)}}
+ f1.onchange=function(){load(f1.files[0],function(i){A=i;draw()})};f2.onchange=function(){load(f2.files[0],function(i){B=i;draw()})};n.onchange=draw;
+ pb.onclick=function(){pr("<img src='"+c.toDataURL("image/png")+"'>")}}
+document.querySelectorAll(".tabs button[data-t]").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tabs button[data-t]").forEach(function(o){o.classList.remove("on")});b.classList.add("on");tool(b.dataset.t)}});tool("cnic");
+// ===== Admin =====
+var tab="Orders",ST=["Awaiting payment","Payment verified","Printing","Ready","Delivered"];
+function tt(m){var t=E("div",m,"toast");document.body.appendChild(t);setTimeout(function(){t.remove()},2600)}
+function tw(b,l){if(b.dataset.a)return true;b.dataset.a=1;var o=b.textContent;b.textContent="Sure?";setTimeout(function(){b.dataset.a="";b.textContent=o},3000);return false}
+function openAdm(e){if(e)e.preventDefault();$("adm").style.display="block";$("adm").scrollIntoView()}
+$("admlink").onclick=openAdm;$("navadm").onclick=openAdm;if(location.hash=="#adm")openAdm();
+function login(){if($("pw").value===D.pw){$("lg1").style.display="none";$("pnl").style.display="block";admin()}else $("pwm").textContent="Wrong password"}
+$("pwb").onclick=login;$("pw").onkeydown=function(e){if(e.key=="Enter")login()};
+function money(n){return "Rs. "+(+n||0).toLocaleString()}
+function sums(day){var s=0,e=0;D.tx.forEach(function(t){if(!day||t.d==day){if(t.k=="sale")s+=t.a;else e+=t.a}});return{s:s,e:e,p:s-e}}
+function admin(){var T=$("at");T.innerHTML="";["Orders","Accounts","Stock","Udhaar","Services","Settings"].forEach(function(n){var b=E("button",n,n==tab?"on":"");b.onclick=function(){tab=n;admin()};T.appendChild(b)});
+ var B=$("ab");B.innerHTML="";
+ if(tab=="Orders"){B.innerHTML="<div class=row><input id=on placeholder=Name><input id=op placeholder='Phone 92…'><select id=os>"+opts+"</select><input id=oq type=number value=1><input id=oa type=number placeholder=Amount><input id=od type=number placeholder='Paid now'></div><button class='btn b1' id=oadd>Add order</button><table class=mini><tr><th>No</th><th>Customer</th><th>Job</th><th>Amount</th><th>Status</th><th></th></tr>"+D.orders.slice().reverse().map(function(o,i){var ix=D.orders.length-1-i;return"<tr><td>"+o.no+"</td><td>"+o.n+"</td><td>"+o.j+"</td><td>"+money(o.a)+" <small>(paid "+money(o.pd)+")</small></td><td><button class=sm data-s="+ix+">"+o.s+"</button></td><td>"+(o.p?"<a class=sm target=_blank href='"+wa(o.p,"Assalam o Alaikum "+o.n+", your order "+o.no+" status: "+o.s+(o.s=="Payment verified"?" — your order is now final. Thank you!":"")+". Junaid Printing.")+"'>WhatsApp</a> ":"")+"<button class=sm data-i="+ix+">Invoice</button> <button class=sm data-x="+ix+">✕</button></td></tr>"}).join("")+"</table>";
+  $("oadd").onclick=function(){var q=+$("oq").value||1,a=+$("oa").value||ITEMS[$("os").value].p*q,pd=+$("od").value||0;D.seq++;D.orders.push({no:"JP-"+String(D.seq).padStart(4,"0"),n:$("on").value||"Walk-in",p:$("op").value.replace(/\D/g,""),j:ITEMS[$("os").value].n+" ×"+q,a:a,pd:pd,s:"Awaiting payment",d:today()});if(pd)D.tx.push({d:today(),k:"sale",t:"Order "+D.seq,a:pd});save();admin()};
+  B.querySelectorAll("[data-s]").forEach(function(b){b.onclick=function(){var o=D.orders[b.dataset.s];o.s=ST[(ST.indexOf(o.s)+1)%ST.length];save();admin()}});
+  B.querySelectorAll("[data-x]").forEach(function(b){b.onclick=function(){if(tw(b)){D.orders.splice(b.dataset.x,1);save();admin()}}});
+  B.querySelectorAll("[data-i]").forEach(function(b){b.onclick=function(){var o=D.orders[b.dataset.i];pr("<div style='padding:30px;font-family:sans-serif'><h1>Junaid Printing</h1><p>Murree Road, Rawalpindi (opp. Benazir Bhutto Hospital)</p><hr><h3>Invoice "+o.no+"</h3><p>Date: "+o.d+"<br>Customer: "+o.n+"<br>Job: "+o.j+"</p><h2>Total: "+money(o.a)+"</h2><p>Paid: "+money(o.pd)+" · Balance: "+money(o.a-o.pd)+"</p><p>Thank you!</p></div>")}})}
+ if(tab=="Accounts"){var t=sums(today()),all=sums();B.innerHTML="<div class=stats><div><b>"+money(t.s)+"</b>Sales today</div><div><b>"+money(t.e)+"</b>Expenses today</div><div><b>"+money(t.p)+"</b>Profit today</div><div><b>"+money(all.p)+"</b>Profit all time</div></div><div class=row style='margin-top:14px'><select id=tk><option value=sale>Sale</option><option value=exp>Expense</option></select><input id=tt placeholder=Description><input id=ta type=number placeholder=Amount></div><button class='btn b1' id=tadd>Add</button> <button class='btn b1' id=trp style='background:var(--pri);color:#fff'>Print today's report</button><table class=mini><tr><th>Date</th><th>Type</th><th>Detail</th><th>Amount</th></tr>"+D.tx.slice(-30).reverse().map(function(r){return"<tr><td>"+r.d+"</td><td>"+r.k+"</td><td>"+r.t+"</td><td>"+money(r.a)+"</td></tr>"}).join("")+"</table>";
+  $("tadd").onclick=function(){var a=+$("ta").value;if(a){D.tx.push({d:today(),k:$("tk").value,t:$("tt").value||"-",a:a});save();admin()}};
+  $("trp").onclick=function(){pr("<div style='padding:30px;font-family:sans-serif'><h1>Daily Report — "+today()+"</h1><p>Junaid Printing</p><table border=1 cellpadding=8 style='border-collapse:collapse'><tr><td>Sales</td><td>"+money(t.s)+"</td></tr><tr><td>Expenses</td><td>"+money(t.e)+"</td></tr><tr><td><b>Profit</b></td><td><b>"+money(t.p)+"</b></td></tr></table><h3>Stock</h3>"+D.stock.map(function(s){return s.n+": "+s.q}).join("<br>")+"</div>")}}
+ if(tab=="Stock"){B.innerHTML="<div class=row><input id=sn placeholder='Item (e.g. A3 paper)'><input id=sq type=number placeholder=Qty></div><button class='btn b1' id=sadd>Add item</button><table class=mini>"+D.stock.map(function(s,i){return"<tr><td>"+s.n+"</td><td"+(s.q<50?" style='color:#dc2626'":"")+"><b>"+s.q+"</b></td><td><button class=sm data-m="+i+">−10</button> <button class=sm data-p="+i+">+100</button></td></tr>"}).join("")+"</table>";
+  $("sadd").onclick=function(){if($("sn").value){D.stock.push({n:$("sn").value,q:+$("sq").value||0});save();admin()}};
+  B.querySelectorAll("[data-m]").forEach(function(b){b.onclick=function(){D.stock[b.dataset.m].q-=10;save();admin()}});B.querySelectorAll("[data-p]").forEach(function(b){b.onclick=function(){D.stock[b.dataset.p].q+=100;save();admin()}})}
+ if(tab=="Udhaar"){var tot=D.udh.reduce(function(a,u){return a+u.a},0);B.innerHTML="<div class=row><input id=un placeholder='Customer name'><input id=ua type=number placeholder=Amount></div><button class='btn b1' id=uadd>Add udhaar</button><h3>Total pending: "+money(tot)+"</h3><table class=mini>"+D.udh.map(function(u,i){return"<tr><td>"+u.n+"</td><td>"+money(u.a)+"</td><td>"+u.d+"</td><td><button class=sm data-u="+i+">Paid ✓</button></td></tr>"}).join("")+"</table>";
+  $("uadd").onclick=function(){if($("un").value&&+$("ua").value){D.udh.push({n:$("un").value,a:+$("ua").value,d:today()});save();admin()}};
+  B.querySelectorAll("[data-u]").forEach(function(b){b.onclick=function(){var u=D.udh.splice(b.dataset.u,1)[0];D.tx.push({d:today(),k:"sale",t:"Udhaar paid: "+u.n,a:u.a});save();admin()}})}
+ if(tab=="Services"){B.innerHTML="<p class=note>Change rates, mark a service unavailable, then press Publish so every customer sees it.</p><label>Announcement bar (leave empty to hide)</label><input id=an><table class=mini><tr><th>Service</th><th>Unit</th><th>Rate</th><th>Available</th><th></th></tr>"+CFG.items.map(function(x,i){return"<tr><td><input data-f=n data-k="+i+"></td><td><input data-f=u data-k="+i+"></td><td><input type=number data-f=p data-k="+i+"></td><td><input type=checkbox data-f=on data-k="+i+"></td><td><button class=sm data-d="+i+">✕</button></td></tr>"}).join("")+"</table><button class=sm id=sa>+ Add service</button> <button class='btn b1' id=sp>Publish to website</button><div class=note id=sm></div>";$("an").value=CFG.ann||"";
+  B.querySelectorAll("[data-f]").forEach(function(e){var x=CFG.items[e.dataset.k],f=e.dataset.f;if(f=="on")e.checked=x.on;else e.value=x[f];e.onchange=function(){x[f]=f=="on"?e.checked:f=="p"?+e.value||0:e.value}});
+  B.querySelectorAll("[data-d]").forEach(function(b){b.onclick=function(){if(tw(b)){CFG.items.splice(b.dataset.d,1);admin()}}});
+  $("sa").onclick=function(){CFG.items.push({n:"New service",u:"per piece",p:0,on:true});admin()};
+  $("sp").onclick=function(){CFG.ann=$("an").value;$("sm").textContent="Publishing…";(typeof claude!=="undefined"?claude.use("artifact"):Promise.resolve(null)).then(function(a){if(!a){$("sm").textContent="Publishing is only possible when you open the page from your Claude account.";return}return a.publish(pubHtml())}).catch(function(e){$("sm").textContent="Could not publish ("+(e.code||e.message)+"). "+(e.code=="not_writer"?"Open the page while logged in to your own Claude account.":"")})}}
+ if(tab=="Settings"){B.innerHTML="<label>Change password</label><input id=np placeholder='New password'><button class='btn b1' id=npb style='margin:8px 0'>Save password</button><label>Backup (copy this text and keep it safe) / Restore (paste and press Restore)</label><textarea id=bk rows=5></textarea><button class='btn b1' id=bkb>Restore</button>";$("bk").value=JSON.stringify(D);
+  $("npb").onclick=function(){if($("np").value){D.pw=$("np").value;save();tt("Password changed")}};$("bkb").onclick=function(){try{D=Object.assign(D,JSON.parse($("bk").value));save();admin();tt("Restored")}catch(e){tt("Invalid backup")}}}}
+
+function pubHtml(){var X="</"+"script",O="<scr"+"ipt type=\"text/plain\" id=\"tpl\">",A=$("tpl").textContent.split("<\\/script").join(X),M="@@"+"CFG@@";
+ var filled=O+A.split(X).join("<\\/script")+X,h=A.split(O+X).join(filled);
+ var j=JSON.stringify(CFG).split("</").join("<\\/");return h.replace(M,function(){return j})}
+</script>
+
+</body>
+</html>
